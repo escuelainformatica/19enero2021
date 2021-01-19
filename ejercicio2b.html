@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 id="nombrepais"></h1>
+
+    <script>
+        //let url=new URL(document.location);
+        //let parametros=new URLSearchParams(url.search);
+        //let pais=parametros.get('pais');
+
+        let nombrePais=new URLSearchParams(
+                    new URL(document.location).search)
+            .get('pais');
+        var h1=document.getElementById('nombrepais');
+        h1.innerHTML=nombrePais;
+
+
+    </script>
+
+</body>
+</html>

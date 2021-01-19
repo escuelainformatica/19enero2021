@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="reloj" onclick="detenerReloj()" >????????</div>
+    <div id="reloj2">????????</div>
+
+
+    <script>
+        var intervalo=setInterval(function() {
+            let reloj=document.getElementById('reloj');
+            reloj.innerHTML=new Date();
+        },1000); // 1 seg
+
+        setTimeout(function() {
+            let reloj=document.getElementById('reloj2');
+            reloj.innerHTML=new Date();
+        },10000); // 10 seg.
+
+        function detenerReloj() {
+            console.log(intervalo);
+            clearInterval(intervalo);
+        }
+
+
+    </script>
+
+</body>
+</html>

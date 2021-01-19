@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+
+        // http://localhost:63342/19enero2021/login.html?usuario=USUARIO&clave=CLAVE
+        //       0         1         2         3         4         5         6
+        //       01234567890123456789012345678901234567890123456789012345678901234567890123456789
+        let url="http://localhost:63342/19enero2021/login.html?usuario=USUARIO&clave=CLAVE";
+
+        let posicion1=url.indexOf('?usuario=') + 9; // 53
+        let posicion2=url.indexOf('&',posicion1); // 61
+        document.write(posicion2);
+        document.write("<br>");
+        document.write(url.substr(posicion1,posicion2-posicion1));
+
+        let posicion3=url.indexOf('&clave=')+7;
+        document.write("<br>");
+        document.write(url.substr(posicion3,9999));
+
+
+        // clases
+        // http://localhost:63342/19enero2021/login.html?usuario=USUARIO&clave=CLAVE
+        let direccion=new URL(url);
+        console.log(direccion);
+
+        // ?usuario=USUARIO&clave=CLAVE
+        let parametros=new URLSearchParams(direccion.search);
+        console.log(parametros);
+        document.write("<br>");
+        document.write( parametros.get('usuario'));
+
+        document.write("<br>");
+        document.write( parametros.get('clave'));
+
+        // new para crear un objeto basado en un objeto prototipo.
+
+
+
+
+
+
+    </script>
+</body>
+</html>

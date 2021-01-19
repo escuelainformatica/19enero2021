@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // prototipo = definicion.
+
+        // prototipo.
+        function Clase(nombre) {
+            this.nombre=nombre;    // this??? al objeto que se esta trabajo.
+            this.funcion10=function () {
+                console.log("se llamo a la funcion");
+            }
+        }
+
+        let objeto=new Clase("hola");
+
+        console.log(objeto);
+        objeto.funcion10();
+
+        objeto=new Clase("mundo");
+        console.log(objeto);
+
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+
+
+        let codigo={nombre:"hola",valor:500}; // new
+        console.log(codigo); // {nombre: "hola", valor: 500}
+        let copia=codigo; // referencia.
+        console.log(copia); // {nombre: "hola", valor: 500}
+
+        copia.nombre="mundo";
+
+        console.log(codigo); // {nombre: "mundo", valor: 500}
+        console.log(copia);  // {nombre: "mundo", valor: 500}
+
+
+    </script>
+</body>
+</html>

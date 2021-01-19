@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+    var john={nombre:"john",apellido:"doe"};
+    var anna={nombre:"anna",apellido:"smith"};
+    var peter={nombre:"peter",appellido:"s."};
+
+    function Cliente(argNombre,argApellido) {
+        this.nombre=argNombre; // no esta ingresado
+        this.apellido=argApellido; // se ingreso pero vacio
+        this.edad=0;
+    }
+
+    var john2=new Cliente();
+    john2.nombre="john";
+    john2.apellido="doe";
+
+    // un objeto del tipo cliente
+    var anna2=new Cliente("Anna","Smith");
+    var peter2=new Cliente("Peter","s");
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

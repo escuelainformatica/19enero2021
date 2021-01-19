@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .rojo {background-color:red}
+        .azul {background-color:blue}
+        .amarillo {background-color: yellow}
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+
+    </div>
+
+    <script>
+        function CrearDiv(clase,texto) {
+            this.clase=clase;
+            this.texto=texto;
+            this.agregarAlContenedor=function() {
+                let contenedor=document.getElementById('contenedor');
+                let divNuevo=document.createElement("div");
+                divNuevo.onclick=function() {
+                    //console.log(this);
+                    if (this.className==="rojo") {
+                        this.className="azul";
+                    } else {
+                        this.className="rojo";
+                    }
+                }
+                divNuevo.className=this.clase;
+                let h1Nuevo=document.createElement("h1");
+                h1Nuevo.innerHTML=this.texto;
+                divNuevo.appendChild(h1Nuevo);
+                contenedor.appendChild(divNuevo);
+
+            }
+        }
+
+        let div1=new CrearDiv('rojo','div #1');
+        div1.agregarAlContenedor();
+
+        let div2=new CrearDiv('azul','div #2');
+        div2.agregarAlContenedor();
+
+
+
+    </script>
+
+
+</body>
+</html>
