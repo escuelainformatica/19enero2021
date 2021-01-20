@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .rojo {background-color: red}
+    </style>
+</head>
+<body>
+    <ul id="paises">
+        <li>chile</li>
+        <li>argentina</li>
+
+    </ul>
+
+    <script>
+        let paises=document.getElementById('paises');
+        console.log(paises.childNodes);
+        paises.childNodes.forEach(hijo => {
+            console.log(hijo);
+            hijo.className="rojo";
+            hijo.onclick=function() {
+                alert("click en el boton");
+            }
+
+        });
+
+
+
+    </script>
+
+</body>
+</html>
